@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: httpbin
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argocd
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: charts/httpbin
+    repoURL: https://github.com/mfalicoff/charts.git
+    targetRevision: HEAD
+  syncPolicy:
+  automated: {}
+  syncOptions:
+    - CreateNamespace=true
+    - PruneLast=true
+  retry:
+    limit: 2
+    backoff:
+      duration: 5s
+      factor: 2
+      maxDuration: 3m0s
