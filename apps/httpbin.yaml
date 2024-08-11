@@ -15,13 +15,13 @@ spec:
     repoURL: https://github.com/mfalicoff/charts.git
     targetRevision: HEAD
   syncPolicy:
-  automated: {}
-  syncOptions:
-    - CreateNamespace=true
-    - PruneLast=true
-  retry:
-    limit: 2
-    backoff:
-      duration: 5s
-      factor: 2
-      maxDuration: 3m0s
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true
+    retry:
+      limit: 2
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m0s
