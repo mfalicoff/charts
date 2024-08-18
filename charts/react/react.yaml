@@ -18,6 +18,9 @@ spec:
         image: onedev.mazilious-tower.duckdns.org/nextjs-test/nextsjs-testt:latest 
         ports:
         - containerPort: 3000
+      imagePullSecrets:
+      - name: regcred
+
 ---
 apiVersion: v1
 kind: Service
