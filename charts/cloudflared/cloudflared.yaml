@@ -91,6 +91,8 @@ data:
     # The first rule proxies traffic to the httpbin sample Service defined in app.yaml
     - hostname: mazilious.org
       service: http://web-service:80
+    - hostname: react.mazilious.org
+      service: http://react-servce:3000
     - hostname: nginx.mazilious.org
       service: http://nginx-service:80
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
