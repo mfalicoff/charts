@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: react
-        image: onedev.mazilious.org/nextjs-test/nextsjs-testt:latest 
+        image: onedev.mazilious-tower.duckdns.org/nextjs-test/nextsjs-testt:latest 
         ports:
         - containerPort: 3000
 ---
