@@ -11,8 +11,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: 
-    repoURL: https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/install.yaml
+    chart: install.yaml
+    repoURL: https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/
     targetRevision: HEAD
   syncPolicy:
     syncOptions:
