@@ -13,6 +13,7 @@ spec:
   source:
     chart: manifests/install.yaml
     repoURL: https://github.com/argoproj-labs/argocd-image-updater
+    targetRevision: master
   syncPolicy:
     syncOptions:
       - PruneLast=true
